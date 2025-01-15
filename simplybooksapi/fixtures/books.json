@@ -1,0 +1,38 @@
+[
+  {
+    "model": "simplybooksapi.book",
+    "pk": 1,
+    "fields": {
+      "author": 3,
+      "title": "i am king",
+      "image": "https://i.imgur.com/ECCuEFG.png",
+      "price": 10,
+      "sale": true,
+      "description": "he who must declare..."
+    }
+  },
+  {
+    "model": "simplybooksapi.book",
+    "pk": 2,
+    "fields": {
+      "author": 2,
+      "title": "sugar and smoke",
+      "image": "https://i.imgur.com/xk58SkO.png",
+      "price": 12,
+      "sale": false,
+      "description": "opiates and love"
+    }
+  },
+  {
+    "model": "simplybooksapi.book",
+    "pk": 3,
+    "fields": {
+      "author": 1,
+      "title": "being last...",
+      "image": "https://i.imgur.com/3yu40Md.png",
+      "price": 2,
+      "sale": false,
+      "description": "...is being seen."
+    }
+  }
+]

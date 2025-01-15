@@ -1,0 +1,23 @@
+[
+  {
+    "model": "simplybooksapi.genre",
+    "pk": 1,
+    "fields": {
+      "description": "futuristic sci-fi dystopia"
+    }
+  },
+  {
+    "model": "simplybooksapi.genre",
+    "pk": 2,
+    "fields": {
+      "description": "cottagecore aesthetic"
+    }
+  },
+  {
+    "model": "simplybooksapi.genre",
+    "pk": 3,
+    "fields": {
+      "description": "cigarettes and starbucks"
+    }
+  }
+]

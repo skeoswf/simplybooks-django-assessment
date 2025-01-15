@@ -1,0 +1,35 @@
+[
+  {
+    "model": "simplybooksapi.author",
+    "pk": 1,
+    "fields": {
+      "email": "notmine@mine.com",
+      "first_name": "no1",
+      "last_name": "1",
+      "image": "https://i.imgur.com/tOzgpfn.png",
+      "favorite": true
+    }
+  },
+  {
+    "model": "simplybooksapi.author",
+    "pk": 2,
+    "fields": {
+      "email": "despise!@huh?.com",
+      "first_name": "the",
+      "last_name": "next",
+      "image": "https://i.imgur.com/nMkPQLG.png",
+      "favorite": false
+    }
+  },
+  {
+    "model": "simplybooksapi.author",
+    "pk": 3,
+    "fields": {
+      "email": "chickenwings@beef.com",
+      "first_name": "cluck",
+      "last_name": "CLUCK!!!",
+      "image": "https://i.imgur.com/6RpLEQc.png",
+      "favorite": true
+    }
+  }
+]
