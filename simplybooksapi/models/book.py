@@ -1,5 +1,6 @@
 from django.db import models
 from .author import Author
+from .genre import Genre
 
 
 class Book(models.Model):
@@ -9,3 +10,4 @@ class Book(models.Model):
     price = models.PositiveIntegerField()
     sale = models.BooleanField()
     description = models.CharField(max_length=25)
+    genre = models.ManyToManyField(Genre)

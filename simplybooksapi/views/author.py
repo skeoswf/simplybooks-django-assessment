@@ -27,7 +27,7 @@ class AuthorView(ViewSet):
             favorite=request.data["favorite"]
         )
         serializer = AuthorSerializer(author)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
         author = Author.objects.get(pk=pk)

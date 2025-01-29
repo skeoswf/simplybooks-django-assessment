@@ -8,7 +8,11 @@
       "image": "https://i.imgur.com/ECCuEFG.png",
       "price": 10,
       "sale": true,
-      "description": "he who must declare..."
+      "description": "he who must declare...",
+      "genre": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -20,7 +24,11 @@
       "image": "https://i.imgur.com/xk58SkO.png",
       "price": 12,
       "sale": false,
-      "description": "opiates and love"
+      "description": "opiates and love",
+      "genre": [
+        2,
+        3
+      ]
     }
   },
   {
@@ -32,7 +40,11 @@
       "image": "https://i.imgur.com/3yu40Md.png",
       "price": 2,
       "sale": false,
-      "description": "...is being seen."
+      "description": "...is being seen.",
+      "genre": [
+        1,
+        5
+      ]
     }
   }
 ]
