@@ -32,7 +32,7 @@ class BookGenreView(ViewSet):
             genre=genre
         )
         serializer = BookGenreSerializer(book_genre)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
         book_genre = BookGenre.objects.get(pk=pk)

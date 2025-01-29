@@ -2,6 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from .genre import Genre
 
 from simplybooksapi.models import (
     Book,
@@ -14,7 +15,7 @@ class BookView(ViewSet):
     def retrieve(self, request, pk):
         book = Book.objects.get(pk=pk)
         serializer = BookSerializer(book)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def list(self, request):
         book = Book.objects.all()
@@ -23,6 +24,7 @@ class BookView(ViewSet):
 
     def create(self, request):
         author = Author.objects.get(pk=request.data["author"])
+        genre = Genre.objects.get(pk=request.data["genre"])
 
         book = Book.objects.create(
             title=request.data["title"],
@@ -30,11 +32,12 @@ class BookView(ViewSet):
             price=request.data["price"],
             sale=request.data["sale"],
             description=request.data["description"],
-            author=author
+            author=author,
+            genre=genre
         )
 
         serializer = BookSerializer(book)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
 
@@ -46,7 +49,9 @@ class BookView(ViewSet):
         book.description = request.data["description"]
 
         author = Author.objects.get(pk=request.data["author"])
+        genre = Genre.objects.get(pk=request.data["genre"])
         book.author = author
+        book.genre = genre
         book.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -66,5 +71,7 @@ class BookSerializer(serializers.ModelSerializer):
             'price',
             'sale',
             'description',
-            'author_id'
+            'author',
+            'genre'
         )
+        depth = 1

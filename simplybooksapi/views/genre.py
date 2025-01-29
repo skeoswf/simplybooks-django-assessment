@@ -23,7 +23,7 @@ class GenreView(ViewSet):
         )
 
         serializer = GenreSerializer(genre)
-        return Response(serializer)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
         genre = Genre.objects.get(pk=pk)
